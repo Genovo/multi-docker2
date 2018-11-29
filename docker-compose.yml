@@ -20,12 +20,12 @@ services:
       - /app/node_modules
       - ./server:/app
     environment: 
-      - REDIS_HOST=redis
+      - REDIS_HOST=redis # multi-docker2-redis.3kvr9x.0001.usw1.cache.amazonaws.com
       - REDIS_PORT=6379
       - PGUSER=postgres
-      - PGHOST=postgres
-      - PGDATABASE=postgres
-      - PGPASSWORD=postgres_password
+      - PGHOST=postgres #postgres multi-docker2-postgres.ccjfdqm9esv6.us-west-1.rds.amazonaws.com
+      - PGDATABASE=postgres #fibvalues
+      - PGPASSWORD=postgres_password #elephant
       - PGPORT=5432
   client: 
     build: 
